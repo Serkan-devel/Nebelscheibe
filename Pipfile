@@ -1,0 +1,12 @@
+[[source]]
+url = "https://github.com/Serkan-devel/Nebelscheibe"
+verify_ssl = true
+name = "Nebelscheibe"
+
+[packages]
+flask = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
