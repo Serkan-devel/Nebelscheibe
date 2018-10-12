@@ -1,10 +1,11 @@
 [[source]]
-url = "https://github.com/Serkan-devel/Nebelscheibe"
+url = "https://pypi.org/simple"
 verify_ssl = true
-name = "Nebelscheibe"
+name = "pypi"
 
 [packages]
 flask = "*"
+minds-api = "*"
 
 [dev-packages]
 
