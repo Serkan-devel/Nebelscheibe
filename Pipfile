@@ -4,10 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
 minds-api = "*"
+responder = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = true
