@@ -1,5 +1,5 @@
 import responder
-from minds-api import minds-api as mds
+from minds import Minds, Profile
 
 api = responder.API()
 
@@ -7,15 +7,17 @@ api = responder.API()
 def entry():
     pass
 
-@api.route('/media/{m-id}')
+@api.route('/{guid}')
 
-@api.route('/newsfeed/{id}')
+@api.route('/media/{guid}')
 
-@api.route('/blog/view/{b-id}')
+@api.route('/newsfeed/{guid}')
 
-@app.route('/user/<u-id>')
+@api.route('/blog/view/{guid}')
 
-@app.route('/group/profile/<g-id>')
+@app.route('/user/{guid}')
+
+@app.route('/group/profile/{guid}')
 
 if __name__ == '__main__':
     api.run()
