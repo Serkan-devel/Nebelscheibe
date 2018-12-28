@@ -4,13 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-minds-api = "*"
 responder = "*"
+starlette = "==0.8"
+nebel-sdk-py = {editable = true,git = "https://gitlab.com/Serkan-devel/minds-api.git"}
 
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
 
 [pipenv]
 allow_prereleases = true
