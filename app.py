@@ -1,23 +1,24 @@
-import responder
+from starlette.applications import Starlette
 from minds import Minds, Profile
+import uvicorn
 
-api = responder.API()
+app = Starlette()
 
-@api.route('/')
+@app.route('/')
 def entry():
     pass
 
-@api.route('/{guid}')
+@app.route('/{guid}')
 
-@api.route('/media/{guid}')
+@app.route('/media/{guid}')
 
-@api.route('/newsfeed/{guid}')
+@app.route('/newsfeed/{guid}')
 
-@api.route('/blog/view/{guid}')
+@app.route('/blog/view/{guid}')
 
 @app.route('/user/{guid}')
 
 @app.route('/group/profile/{guid}')
 
 if __name__ == '__main__':
-    api.run()
+    uvicorn.run(app)

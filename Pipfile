@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-responder = "*"
-starlette = "==0.8"
+starlette = "*"
 nebel-sdk-py = {editable = true,git = "https://gitlab.com/Serkan-devel/minds-api.git"}
+uvicorn = "*"
 
 [dev-packages]
 
