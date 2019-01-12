@@ -2,7 +2,8 @@ from starlette.applications import Starlette
 from minds import Minds, Profile
 import uvicorn
 
-app = Starlette()
+app = Starlette(debug=True, template_directory='templates')
+app.mount('/static', StaticFiles(directory='static'), name='static')
 
 @app.route('/')
 def entry():
