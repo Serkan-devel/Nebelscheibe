@@ -6,8 +6,7 @@ name = "pypi"
 [packages]
 nebel-sdk-py = {editable = true,git = "https://gitlab.com/Serkan-devel/minds-api.git"}
 sanic = "*"
-starlette = "*"
-uvicorn = "*"
+flask = "*"
 
 [dev-packages]
 

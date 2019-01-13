@@ -1,17 +1,11 @@
-from starlette.applications import Starlette
-from starlette.staticfiles import StaticFiles
-from starlette.responses import HTMLResponse
+from flask import Flask
 from minds import Minds, Profile
-import uvicorn
 
-app = Starlette(debug=True, template_directory='templates')
-app.mount('/static', StaticFiles(directory='static'), name='static')
+app = Flask(__name__)
 
-@app.route('/{input}')
+@app.route('/<input>')
 def entry(input):
-    template = app.get_template('base.html')
-    content = template.render(page_title=input)
-    return HTMLResponse(content)
+    pass
 
 #@app.route('/{guid}')
 
@@ -24,6 +18,3 @@ def entry(input):
 #@app.route('/user/{guid}')
 
 #@app.route('/group/profile/{guid}')
-
-if __name__ == '__main__':
-    uvicorn.run(app)
